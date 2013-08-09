@@ -720,7 +720,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
                 HistoryAdapter adapter = mMasterImage.getHistory();
                 int position = adapter.undo();
                 mMasterImage.onHistoryItemClick(position);
-                mImageShow.showToast("Undo");
+                mImageShow.showToast(getString(R.string.filtershow_undo));
                 backToMain();
                 invalidateViews();
                 return true;
@@ -729,7 +729,7 @@ public class FilterShowActivity extends FragmentActivity implements OnItemClickL
                 HistoryAdapter adapter = mMasterImage.getHistory();
                 int position = adapter.redo();
                 mMasterImage.onHistoryItemClick(position);
-                mImageShow.showToast("Redo");
+                mImageShow.showToast(getString(R.string.filtershow_redo));
                 invalidateViews();
                 return true;
             }
